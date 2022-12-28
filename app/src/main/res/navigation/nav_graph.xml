@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/searchFragment">
+
+       <fragment
+        android:id="@+id/searchFragment"
+        android:name="ru.kartyshova.bookinfo.presentation.search.SearchFragment"
+        android:label="SearchFragment" >
+        <action
+            android:id="@+id/open_bookInfoFragment"
+            app:destination="@id/bookInfoFragment" >
+           <argument android:name="arg" app:argType="ru.kartyshova.bookinfo.data.Book"/>
+        </action>
+    </fragment>
+
+    <fragment
+    android:id="@+id/bookInfoFragment"
+    android:name="ru.kartyshova.bookinfo.presentation.BookInfoFragment"
+    android:label="BookInfoFragment" />
+
+</navigation>
