@@ -38,10 +38,9 @@ class BookInfoFragment: Fragment (){
                 val openUrl = Intent(Intent.ACTION_VIEW)
                 openUrl.data = Uri.parse(book.volumeInfo.previewLink)
                 startActivity(openUrl)
-
-                Glide.with(requireContext()).load(book.volumeInfo.imageLinks?.smallThumbnail)
-                    .into(imageLinks)
             }
+            Glide.with(requireContext()).load(book.volumeInfo.imageLinks?.smallThumbnail)
+                    .into(imageLinks)
         }
     }
 
